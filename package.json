@@ -1,5 +1,5 @@
 {
-  "name": "cannafoliopinions",
+  "name": "foliopinions",
   "version": "1.0.0",
   "description": "A place to find & share reviews & opinions on cannabis related topics.",
   "main": "app.js",
@@ -7,5 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "xkxh",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^2.0.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
+    "ip": "^1.1.5",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.5.5",
+    "passport": "^0.4.0",
+    "path": "^0.12.7"
+  }
 }
