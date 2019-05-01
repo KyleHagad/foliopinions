@@ -4,7 +4,8 @@
   "description": "A place to find & share reviews & opinions on cannabis related topics.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "SET NODE_ENV=production & npx nodemon",
+    "dev": "SET NODE_ENV=development & npx nodemon %NODE_DEBUG_OPTION%"
   },
   "author": "xkxh",
   "license": "ISC",
