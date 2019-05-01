@@ -1,100 +1,41 @@
+/* Main Layout Style */
 html {
-  height: 100%;
-}
+  height: 100%; /* Setting all the vertical elements to 100%   */
+}               /* fills all available space with the template */
 
 body {
   height: 100%;
-  overflow: hidden;
-  margin: 0px;
+  overflow: hidden; /* Locks out the scroll bar from the body container scroll */
+  margin: 0px;      /* bars will be added to individual content containers     */
   display: flex;
-  box-sizing: border-box; /* >>= TODO find out this does */
-  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-/* >>=Header Styles=<< */
-@media (max-width: 600px) {
-  .site-header {
-    flex-wrap: wrap;
-  }
-
-  .site-nav {
-    order: 2;
-    background: #333;
-    width: 100%;
-  }
+ul {
+  display: inline-flex; /* responsive list content */
+  list-style: none;
 }
 
-.site-header {
-  background: #0D1313;
-  color: white;
+#leftCol {
+  flex-shrink: 0; /* forces left nav to show */
+}
+
+.column {
+  height: 100%; /* see above note */
   display: flex;
-
-  align-items: center;
+  flex-direction: column;
 }
 
-.logo {
-  text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  padding: 10px;
+.top-left {
+  flex-shrink: 0; /* alike to #leftCol */
 }
 
-.site-nav {
-  ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-
-  a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #CDD0D0;
-    padding: 20px;
-    display: inline-block;
-  }
-
-  .active {
-    a {
-      font-weight: bold;
-      color: #62DEBE;
-      background: darken(#62DEBE, 40%);
-    }
-  }
+.top-right {
+  flex-shrink: 0;
+  display: inline-flex;
 }
 
-.dropdown {
-  ul {
-    display: none;
-  }
-
-}
-
-.dropdown:hover {
-  ul {
-    list-style: none;
-    display: block;
-
-    li a {
-      text-decoration: none;
-      padding: 20px;
-    }
-  }
-}
-
-.actions {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.sign-out-link {
-  color: #62DEBE;
-  font-size: 0.8rem;
-  margin-left: 10px;
-  text-transform: uppercase;
+.bottom {
+  flex-grow: 1;
+  overflow-y: auto; /* adds a scroll bar if needed */
 }

@@ -1,0 +1,12 @@
+>>=things=learned=>
+  >>=CSS=>
+    >>=box-sizing property ;; a property that allows you to combine padding & border of an element
+      <code>
+
+        <style>
+          div {
+            box-sizing: border-box;
+          }
+        </style>
+      
+      </code>
